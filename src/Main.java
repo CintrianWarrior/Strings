@@ -1,24 +1,18 @@
 public class Main {
     public static void main(String[] args) {
-        String phone = "+9101234567";
-        phone = phone.replace("-", "");
-        phone = phone.replace(" ", "");
-        phone = phone.replace("+", "");
-        if (phone.length() == 10) {
-            phone = '7' + phone;
-        } else if (phone.length() > 11) {
-            throw new RuntimeException("Телефон слишком длинный");
-        } else if (phone.length() < 10) {
-            throw new RuntimeException("Телефон слишком короткий");
-        } else if (phone.length() == 11 && phone.charAt(0) != '7') {
-            throw new RuntimeException("Некорректный номер");
-        }
-        System.out.println("phone = " + phone);
-        String expectedPhone = "79101234567";
-        if (phone.equals(expectedPhone)) {
-            System.out.println("Успех");
-        } else {
-            System.out.println("Неудача");
-        }
+        System.out.println("Задание 1");
+        String firstName = "Семён";
+        String secondName = "Иванов";
+        String lastName = "Семёнович";
+        firstName = firstName.replace("ё", "е");
+        secondName = secondName.replace("ё", "е");
+        lastName = lastName.replace("ё", "е");
+        String fullName = secondName + " " + firstName + " " + lastName;
+        System.out.println("ФИО сотрудника — " + fullName);
+        System.out.println("Задание 2");
+//        fullName = fullName.toUpperCase();
+        System.out.println("Данные ФИО сотрудника для заполнения отчета — " + fullName);
+        System.out.println("Задание 3");
+        System.out.println("Данные ФИО сотрудника — " + fullName);
     }
 }
